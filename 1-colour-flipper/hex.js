@@ -17,4 +17,3 @@ btn.addEventListener("click", function(){
     colour.textContent = colourLogic()
     document.body.style.backgroundColor = colourLogic()
 })
-

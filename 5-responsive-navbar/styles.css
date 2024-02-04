@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.nav-bar{
+  display: flex;
+  background-color: black;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100px;
+}
+
+.nav-title h2 {
+  display: flex;
+  margin: 0;
+  font-size: 45px;
+}
+
+.nav-title a {
+  text-decoration: none;
+  color: white;
+}
+
+.links{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links li {
+  margin-right: 20px;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  transition: color 0.3s ease-in-out;
+}
+
+.links a:hover {
+  color: #FFD700;
+}
+
+.social-links{
+  display: flex;
+  margin-right: 0;
+}
+
+.social-links li {
+  margin-right: 30px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.social-links i {
+  font-size: 40px;
+}
+
+.social-links i:hover {
+  font-weight: 600;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 800px) {
+
+  .nav-bar{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-title{
+    margin-left: 20px;
+  }
+
+  .list {
+    width: 100%;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #4F8A8B;
+    align-items: flex-start;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .links li{
+    background-color: transparent;
+  }
+
+  .links a{
+    font-size: 25px;
+  }
+  .links li:hover{
+    background-color: black;
+  }
+
+  .links.show-links{
+    max-height: 18rem;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .links a:hover {
+    color: white;
+  }
+
+  .links li {
+    margin: 10px 0;
+    list-style-type: none;
+    width: 100%;
+  }
+
+  .social-links {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+    margin-right: 50px;
+    transition: transform 0.28s ease-in-out;
+  }
+
+  .rotate {
+    transform: rotate(90deg);
+  }
+}
