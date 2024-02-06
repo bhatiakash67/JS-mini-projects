@@ -20,7 +20,7 @@ body {
 .nav-title h2 {
   display: flex;
   margin: 0;
-  font-size: 45px;
+  font-size: 2.8125em;
 }
 
 .nav-title a {
@@ -42,7 +42,7 @@ body {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 2.5em;
   transition: color 0.3s ease-in-out;
 }
 
@@ -52,11 +52,14 @@ body {
 
 .social-links{
   display: flex;
+  justify-content: center; /* Center the social links horizontally */
+  flex-wrap: wrap; /* Allow the social links to wrap onto multiple lines if needed */
   margin-right: 0;
 }
 
 .social-links li {
   margin-right: 30px;
+  list-style-type: none;
 }
 
 .social-links a {
@@ -65,7 +68,7 @@ body {
 }
 
 .social-links i {
-  font-size: 40px;
+  font-size: 2.5em;
 }
 
 .social-links i:hover {
@@ -116,7 +119,7 @@ body {
   }
 
   .links a{
-    font-size: 25px;
+    font-size: 1.5625em;
   }
   .links li:hover{
     background-color: black;
@@ -139,6 +142,11 @@ body {
 
   .social-links {
     display: none;
+    justify-content: space-around;
+  }
+
+  .social-links li {
+    margin-right: 15px;
   }
 
   .nav-toggle {
