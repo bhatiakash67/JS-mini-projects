@@ -4,6 +4,13 @@ const closeBtns = document.querySelectorAll(".close-btn")
 
 showBtns.forEach((btn, index) => {
     btn.addEventListener("click", () => {
+        answers.forEach((answer, i) => {
+            if(i !== index){
+                answer.classList.remove("showanswer")
+                closeBtns[i].style.display = "none"
+                showBtns[i].style.display = "inline"
+            }
+        })
         answers[index].classList.add("showanswer")
         showBtns[index].style.display = "none"
         closeBtns[index].style.display = "inline"
